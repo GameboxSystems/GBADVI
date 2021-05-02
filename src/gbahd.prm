@@ -1,0 +1,17 @@
+PROMGEN: Xilinx Prom Generator P.20131013
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+promgen -w -p mcs -c FF -o /home/ise/Projects/Gameboy/GBAHD//gbahd -s 4096 -u 0000 /home/ise/Projects/Gameboy/GBAHD/top.bit -spi 
+
+PROM /home/ise/Projects/Gameboy/GBAHD/gbahd.prm map: Sun Mar 28 13:02:50 2021
+
+Calculating PROM checksum with fill value ff
+
+Format        Mcs86 (32-bit)
+Size          4096K
+PROM start    0000:0000
+PROM end      003f:ffff
+PROM checksum 3acb5c8b
+
+        Addr1        Addr2                     Date File(s)
+    0000:0000    0005:3393     Mar 28 12:58:40 2021 /home/ise/Projects/Gameboy/GBAHD/top.bit

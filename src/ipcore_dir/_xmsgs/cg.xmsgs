@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="sim" num="172" delta="old" >Generating IP...
+</msg>
+
+<msg type="error" file="coreutil" num="0" delta="new" >ERROR:sim - BRAM utilization for the selected configuration exceeds the no. of
+   BRAM&apos;s available on device.ERROR:sim:781 - An invalid core configuration has been detected during
+   Customization. Core parameters will be reset to their default values.
+</msg>
+
+<msg type="warning" file="coreutil" num="0" delta="new" >WARNING:sim:192 - Xco Parameter changed from (Component_Name,ila) to
+   (Component_Name,chipscope_ila) during Recustomization.
+WARNING:sim:192 - Xco Parameter changed from (Number_Of_Trigger_Ports,6) to
+   (Number_Of_Trigger_Ports,1) during Recustomization.
+WARNING:sim:192 - Xco Parameter changed from (Sample_Data_Depth,16384) to
+   (Sample_Data_Depth,1024) during Recustomization.
+WARNING:sim:192 - Xco Parameter changed from (Trigger_Port_Width_1,1) to
+   (Trigger_Port_Width_1,8) during Recustomization.
+WARNING:sim:192 - Xco Parameter changed from (Trigger_Port_Width_2,1) to
+   (Trigger_Port_Width_2,8) during Recustomization.
+WARNING:sim:192 - Xco Parameter changed from (Trigger_Port_Width_3,1) to
+   (Trigger_Port_Width_3,8) during Recustomization.
+WARNING:sim:192 - Xco Parameter changed from (Trigger_Port_Width_4,1) to
+   (Trigger_Port_Width_4,8) during Recustomization.
+WARNING:sim:192 - Xco Parameter changed from (Trigger_Port_Width_5,1) to
+   (Trigger_Port_Width_5,8) during Recustomization.
+WARNING:sim:192 - Xco Parameter changed from (Trigger_Port_Width_6,1) to
+   (Trigger_Port_Width_6,8) during Recustomization.
+</msg>
+
+</messages>
+

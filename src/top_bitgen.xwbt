@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/xilinx/Desktop/GBADVI/top.ncd
+OUTFILE=/home/xilinx/Desktop/GBADVI/top.bit
+FAMILY=Spartan6
+PART=xc6slx9-2tqg144
+WORKINGDIR=/home/xilinx/Desktop/GBADVI
+LICENSE=WebPack
+USER_INFO=__0_0_0
