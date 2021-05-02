@@ -1,6 +1,6 @@
 # GBADVI
 
-GBADVI is a custom DVI driver written in VHDL for the Gameboy Advance. It employs a custom PCB based around the Spartan-6 (XC6SLX9) FPGA that takes in GBA display and control signals (through SNES port) and outputs a pure DVI signal through the onboard HDMI. Project includes a custom quick solder flex cable made by [Helder](https://github.com/Helder1981) (Instagram: @angryhelder) that breaks out control signals to the FPGA as well as supplies power to the GBA itself.
+GBADVI is a custom DVI driver written in VHDL for the Gameboy Advance. It employs a custom PCB based around the Spartan-6 (XC6SLX9) FPGA that takes in GBA display and control signals (through SNES port), stores frames in SDRAM, and outputs a pure DVI signal through the onboard HDMI. Project includes a custom quick solder flex cable made by [Helder](https://github.com/Helder1981) (Instagram: @angryhelder) that breaks out control signals to the FPGA as well as supplies power to the GBA itself.
 
 ## Deployment
 
