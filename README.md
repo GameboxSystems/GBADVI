@@ -42,5 +42,6 @@ This project is licensed under the GPLv3 License - see the LICENSE.md file for d
 
 ## Acknowledgments
 
-* **zwenergy** - Original inspiration for the project, his [gbaHD] is a wonderful implementation that they were kind enough to give to us all. Thank you zwenergy!
+* **zwenergy** - Original inspiration for the project, his [gbaHD](https://github.com/zwenergy/gbaHD) is a wonderful implementation that they were kind enough to give to us all. Thank you zwenergy!
+* **Helder** - Maker of the flex and all around great modder. Visit his site at https://www.heldergametech.com/ for awesome modding products!
 
