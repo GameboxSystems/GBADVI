@@ -36,8 +36,6 @@ GBADVI is completely open source under GPL and those wanting to contribute are w
 
 * **Aaron Silberman** - *Hardware Engineer* - [Postman](https://github.com/GameboxSystems/)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
 ## License
 
 This project is licensed under the GPLv3 License - see the LICENSE.md file for details
