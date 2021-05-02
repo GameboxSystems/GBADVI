@@ -1,0 +1,1372 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.01 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.01 secs
+ 
+--> 
+Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : xc6slx9-2-tqg144
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/xilinx/Desktop/GBADVI/src/SDRAM/sdram.v" into library work
+Parsing module <sdram>.
+Analyzing Verilog file "/home/xilinx/Desktop/GBADVI/ipcore_dir/packer_fifo.v" into library work
+Parsing module <packer_fifo>.
+Analyzing Verilog file "/home/xilinx/Desktop/GBADVI/ipcore_dir/line_buffer.v" into library work
+Parsing module <line_buffer>.
+Parsing VHDL file "/home/xilinx/Desktop/GBADVI/src/DVI720p/PHY/serdes5to1.vhd" into library work
+Parsing entity <serdes5to1>.
+Parsing architecture <arch_imp> of entity <serdes5to1>.
+Parsing VHDL file "/home/xilinx/Desktop/GBADVI/src/DVI720p/PHY/bram30to15.vhd" into library work
+Parsing entity <bram30to15>.
+Parsing architecture <Behavioral> of entity <bram30to15>.
+Parsing VHDL file "/home/xilinx/Desktop/GBADVI/src/DVI720p/TMDS_encoder.vhd" into library work
+Parsing entity <tmds_encoder>.
+Parsing architecture <Behavioral> of entity <tmds_encoder>.
+WARNING:HDLCompiler:957 - "/home/xilinx/Desktop/GBADVI/src/DVI720p/TMDS_encoder.vhd" Line 62: Case choice must be a locally static expression
+WARNING:HDLCompiler:957 - "/home/xilinx/Desktop/GBADVI/src/DVI720p/TMDS_encoder.vhd" Line 63: Case choice must be a locally static expression
+WARNING:HDLCompiler:957 - "/home/xilinx/Desktop/GBADVI/src/DVI720p/TMDS_encoder.vhd" Line 64: Case choice must be a locally static expression
+WARNING:HDLCompiler:957 - "/home/xilinx/Desktop/GBADVI/src/DVI720p/TMDS_encoder.vhd" Line 65: Case choice must be a locally static expression
+WARNING:HDLCompiler:957 - "/home/xilinx/Desktop/GBADVI/src/DVI720p/TMDS_encoder.vhd" Line 66: Case choice must be a locally static expression
+WARNING:HDLCompiler:957 - "/home/xilinx/Desktop/GBADVI/src/DVI720p/TMDS_encoder.vhd" Line 67: Case choice must be a locally static expression
+WARNING:HDLCompiler:957 - "/home/xilinx/Desktop/GBADVI/src/DVI720p/TMDS_encoder.vhd" Line 68: Case choice must be a locally static expression
+WARNING:HDLCompiler:957 - "/home/xilinx/Desktop/GBADVI/src/DVI720p/TMDS_encoder.vhd" Line 69: Case choice must be a locally static expression
+WARNING:HDLCompiler:957 - "/home/xilinx/Desktop/GBADVI/src/DVI720p/TMDS_encoder.vhd" Line 70: Case choice must be a locally static expression
+Parsing VHDL file "/home/xilinx/Desktop/GBADVI/src/DVI720p/PHY/hdmi_phy.vhd" into library work
+Parsing entity <hdmi_phy>.
+Parsing architecture <arch_imp> of entity <hdmi_phy>.
+Parsing VHDL file "/home/xilinx/Desktop/GBADVI/src/SDRAM/sdram_ctrl.vhd" into library work
+Parsing entity <sdram_ctrl>.
+Parsing architecture <arch_imp> of entity <sdram_ctrl>.
+Parsing VHDL file "/home/xilinx/Desktop/GBADVI/src/packer.vhd" into library work
+Parsing entity <packer>.
+Parsing architecture <arch_imp> of entity <packer>.
+Parsing VHDL file "/home/xilinx/Desktop/GBADVI/src/loader.vhd" into library work
+Parsing entity <loader>.
+Parsing architecture <arch_imp> of entity <loader>.
+Parsing VHDL file "/home/xilinx/Desktop/GBADVI/src/GBA/gba_axis.vhd" into library work
+Parsing entity <gba_axis>.
+Parsing architecture <arch_imp> of entity <gba_axis>.
+Parsing VHDL file "/home/xilinx/Desktop/GBADVI/src/DVI720p/dvi_video_720p.vhd" into library work
+Parsing entity <dvi_video_720p>.
+Parsing architecture <arch_imp> of entity <dvi_video_720p>.
+Parsing VHDL file "/home/xilinx/Desktop/GBADVI/src/controllers/nes_controller.vhd" into library work
+Parsing entity <nes_controller>.
+Parsing architecture <arch_imp> of entity <nes_controller>.
+Parsing VHDL file "/home/xilinx/Desktop/GBADVI/src/clk_sys.vhd" into library work
+Parsing entity <clk_sys>.
+Parsing architecture <arch_imp> of entity <clk_sys>.
+Parsing VHDL file "/home/xilinx/Desktop/GBADVI/src/top.vhd" into library work
+Parsing entity <top>.
+Parsing architecture <arch_imp> of entity <top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <top> (architecture <arch_imp>) from library <work>.
+
+Elaborating entity <clk_sys> (architecture <arch_imp>) from library <work>.
+
+Elaborating entity <dvi_video_720p> (architecture <arch_imp>) with generics from library <work>.
+
+Elaborating entity <tmds_encoder> (architecture <Behavioral>) with generics from library <work>.
+WARNING:HDLCompiler:92 - "/home/xilinx/Desktop/GBADVI/src/DVI720p/TMDS_encoder.vhd" Line 81: n1d should be on the sensitivity list of the process
+WARNING:HDLCompiler:1127 - "/home/xilinx/Desktop/GBADVI/src/DVI720p/TMDS_encoder.vhd" Line 78: Assignment to ifds ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/xilinx/Desktop/GBADVI/src/DVI720p/TMDS_encoder.vhd" Line 202: Assignment to q_reg ignored, since the identifier is never used
+
+Elaborating entity <tmds_encoder> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <tmds_encoder> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <hdmi_phy> (architecture <arch_imp>) from library <work>.
+
+Elaborating entity <bram30to15> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "/home/xilinx/Desktop/GBADVI/src/DVI720p/PHY/bram30to15.vhd" Line 72: rst should be on the sensitivity list of the process
+
+Elaborating entity <serdes5to1> (architecture <arch_imp>) from library <work>.
+WARNING:HDLCompiler:1127 - "/home/xilinx/Desktop/GBADVI/src/top.vhd" Line 436: Assignment to x_rel_pos ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/xilinx/Desktop/GBADVI/src/top.vhd" Line 437: Assignment to y_rel_pos ignored, since the identifier is never used
+
+Elaborating entity <gba_axis> (architecture <arch_imp>) with generics from library <work>.
+WARNING:HDLCompiler:1127 - "/home/xilinx/Desktop/GBADVI/src/GBA/gba_axis.vhd" Line 63: Assignment to x_cnt ignored, since the identifier is never used
+Going to verilog side to elaborate module packer_fifo
+
+Elaborating module <packer_fifo>.
+WARNING:HDLCompiler:1499 - "/home/xilinx/Desktop/GBADVI/ipcore_dir/packer_fifo.v" Line 39: Empty module <packer_fifo> remains a black box.
+Back to vhdl to continue elaboration
+
+Elaborating entity <packer> (architecture <arch_imp>) with generics from library <work>.
+Going to verilog side to elaborate module sdram
+
+Elaborating module <sdram>.
+
+Elaborating module <ODDR2(DDR_ALIGNMENT="NONE",INIT=1'b0,SRTYPE="SYNC")>.
+
+Elaborating module <IODELAY2(IDELAY_VALUE=0,IDELAY_MODE="NORMAL",ODELAY_VALUE=100,IDELAY_TYPE="FIXED",DELAY_SRC="ODATAIN",DATA_RATE="SDR")>.
+Back to vhdl to continue elaboration
+WARNING:HDLCompiler:439 - "/home/xilinx/Desktop/GBADVI/src/top.vhd" Line 198: Formal port sdram_dq of mode inout cannot be associated with actual port sdram_dq of mode out
+INFO:HDLCompiler:1408 - "/home/xilinx/Desktop/GBADVI/src/SDRAM/sdram.v" Line 26. sdram_dq is declared here
+
+Elaborating entity <sdram_ctrl> (architecture <arch_imp>) from library <work>.
+
+Elaborating entity <loader> (architecture <arch_imp>) with generics from library <work>.
+Going to verilog side to elaborate module line_buffer
+
+Elaborating module <line_buffer>.
+WARNING:HDLCompiler:1499 - "/home/xilinx/Desktop/GBADVI/ipcore_dir/line_buffer.v" Line 39: Empty module <line_buffer> remains a black box.
+Back to vhdl to continue elaboration
+WARNING:HDLCompiler:92 - "/home/xilinx/Desktop/GBADVI/src/top.vhd" Line 589: screen_start_y should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/xilinx/Desktop/GBADVI/src/top.vhd" Line 591: screen_start_y should be on the sensitivity list of the process
+
+Elaborating entity <nes_controller> (architecture <arch_imp>) with generics from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <top>.
+    Related source file is "/home/xilinx/Desktop/GBADVI/src/top.vhd".
+INFO:Xst:3210 - "/home/xilinx/Desktop/GBADVI/src/top.vhd" line 388: Output port <dclk> of the instance <clk_sys_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/xilinx/Desktop/GBADVI/src/top.vhd" line 388: Output port <serdesrst> of the instance <clk_sys_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/xilinx/Desktop/GBADVI/src/top.vhd" line 388: Output port <buf_lock> of the instance <clk_sys_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/xilinx/Desktop/GBADVI/src/top.vhd" line 404: Output port <frame_width> of the instance <hdmi_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/xilinx/Desktop/GBADVI/src/top.vhd" line 404: Output port <frame_height> of the instance <hdmi_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/xilinx/Desktop/GBADVI/src/top.vhd" line 404: Output port <screen_width> of the instance <hdmi_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/xilinx/Desktop/GBADVI/src/top.vhd" line 404: Output port <screen_height> of the instance <hdmi_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/xilinx/Desktop/GBADVI/src/top.vhd" line 460: Output port <s_axis_tready> of the instance <gba_to_ram_fifo> is unconnected or connected to loadless signal.
+    Found 8-bit register for signal <hdmi_line_cnt>.
+    Found 1-bit register for signal <hdmi_line_start>.
+    Found 2-bit register for signal <v_scale_cnt>.
+    Found 8-bit register for signal <h_line_cnt>.
+    Found 2-bit register for signal <line_scale_cnt>.
+    Found 9-bit register for signal <rd_addr_cnt>.
+    Found 2-bit register for signal <h_scale_cnt>.
+    Found 8-bit register for signal <hdmi_line_num>.
+    Found 11-bit adder for signal <screen_start_x[10]_GND_5_o_add_3_OUT> created at line 585.
+    Found 11-bit adder for signal <screen_start_x[10]_PWR_5_o_add_5_OUT> created at line 587.
+    Found 10-bit adder for signal <screen_start_y[9]_GND_5_o_add_7_OUT> created at line 589.
+    Found 10-bit adder for signal <screen_start_y[9]_PWR_5_o_add_9_OUT> created at line 591.
+    Found 10-bit adder for signal <screen_start_y[9]_GND_5_o_add_13_OUT> created at line 604.
+    Found 8-bit adder for signal <hdmi_line_cnt[7]_GND_5_o_add_16_OUT> created at line 1241.
+    Found 2-bit adder for signal <v_scale_cnt[1]_GND_5_o_add_17_OUT> created at line 613.
+    Found 11-bit adder for signal <screen_start_x[10]_GND_5_o_add_30_OUT> created at line 629.
+    Found 10-bit adder for signal <screen_start_y[9]_GND_5_o_add_32_OUT> created at line 631.
+    Found 8-bit adder for signal <h_line_cnt[7]_GND_5_o_add_35_OUT> created at line 1241.
+    Found 2-bit adder for signal <line_scale_cnt[1]_GND_5_o_add_36_OUT> created at line 641.
+    Found 9-bit adder for signal <rd_addr_cnt[8]_GND_5_o_add_43_OUT> created at line 1241.
+    Found 2-bit adder for signal <h_scale_cnt[1]_GND_5_o_add_44_OUT> created at line 654.
+    Found 11-bit comparator lessequal for signal <n0002> created at line 585
+    Found 11-bit comparator greater for signal <x_abs_pos[10]_screen_start_x[10]_LessThan_7_o> created at line 587
+    Found 10-bit comparator lessequal for signal <n0007> created at line 589
+    Found 10-bit comparator greater for signal <y_abs_pos[9]_screen_start_y[9]_LessThan_11_o> created at line 591
+    Found 10-bit comparator greater for signal <n0017> created at line 604
+    Found 11-bit comparator equal for signal <x_abs_pos[10]_screen_start_x[10]_equal_32_o> created at line 629
+    Found 10-bit comparator lessequal for signal <n0040> created at line 631
+    Summary:
+	inferred  13 Adder/Subtractor(s).
+	inferred  40 D-type flip-flop(s).
+	inferred   7 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <top> synthesized.
+
+Synthesizing Unit <clk_sys>.
+    Related source file is "/home/xilinx/Desktop/GBADVI/src/clk_sys.vhd".
+    Summary:
+	no macro.
+Unit <clk_sys> synthesized.
+
+Synthesizing Unit <dvi_video_720p>.
+    Related source file is "/home/xilinx/Desktop/GBADVI/src/DVI720p/dvi_video_720p.vhd".
+        BIT_WIDTH = 11
+        BIT_HEIGHT = 10
+    Found 10-bit register for signal <CounterY>.
+    Found 1-bit register for signal <DrawArea>.
+    Found 1-bit register for signal <hSync>.
+    Found 1-bit register for signal <vSync>.
+    Found 11-bit register for signal <CounterX>.
+    Found 10-bit adder for signal <CounterY[9]_GND_8_o_add_2_OUT> created at line 1241.
+    Found 11-bit adder for signal <CounterX[10]_GND_8_o_add_4_OUT> created at line 1241.
+    Found 11-bit comparator greater for signal <GND_8_o_CounterX[10]_LessThan_8_o> created at line 105
+    Found 10-bit comparator greater for signal <GND_8_o_CounterY[9]_LessThan_9_o> created at line 105
+    Found 11-bit comparator lessequal for signal <n0011> created at line 111
+    Found 11-bit comparator greater for signal <CounterX[10]_GND_8_o_LessThan_11_o> created at line 111
+    Found 10-bit comparator lessequal for signal <n0015> created at line 117
+    Found 10-bit comparator greater for signal <CounterY[9]_GND_8_o_LessThan_13_o> created at line 117
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  24 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+Unit <dvi_video_720p> synthesized.
+
+Synthesizing Unit <tmds_encoder_1>.
+    Related source file is "/home/xilinx/Desktop/GBADVI/src/DVI720p/TMDS_encoder.vhd".
+        CHANNEL = 0
+    Found 1-bit register for signal <de_reg>.
+    Found 9-bit register for signal <q_m_reg>.
+    Found 2-bit register for signal <c_reg>.
+    Found 10-bit register for signal <tmds>.
+    Found 5-bit register for signal <cnt>.
+    Found 4-bit adder for signal <n0316> created at line 143.
+    Found 4-bit adder for signal <n0319> created at line 143.
+    Found 4-bit adder for signal <n0322> created at line 143.
+    Found 4-bit adder for signal <n0325> created at line 143.
+    Found 4-bit adder for signal <n0328> created at line 143.
+    Found 4-bit adder for signal <n0331> created at line 143.
+    Found 4-bit adder for signal <n1d> created at line 143.
+    Found 4-bit adder for signal <n0337> created at line 187.
+    Found 4-bit adder for signal <n0340> created at line 187.
+    Found 4-bit adder for signal <n0343> created at line 187.
+    Found 4-bit adder for signal <n0346> created at line 187.
+    Found 4-bit adder for signal <n0349> created at line 187.
+    Found 4-bit adder for signal <n0352> created at line 187.
+    Found 4-bit adder for signal <n1q_m> created at line 187.
+    Found 5-bit adder for signal <n0363> created at line 239.
+    Found 5-bit adder for signal <cnt[4]_GND_9_o_add_75_OUT> created at line 239.
+    Found 5-bit adder for signal <GND_9_o_GND_9_o_add_81_OUT> created at line 249.
+    Found 5-bit adder for signal <cnt[4]_GND_9_o_add_83_OUT> created at line 252.
+    Found 4-bit subtractor for signal <n0q_m> created at line 34.
+    Found 5-bit subtractor for signal <n0369> created at line 0.
+    Found 5-bit subtractor for signal <n0370> created at line 0.
+    Found 5-bit subtractor for signal <_n0387> created at line 0.
+    Found 5-bit adder for signal <GND_9_o_GND_9_o_sub_69_OUT<4:0>> created at line 242.
+    Found 4x10-bit Read Only RAM for signal <c_reg[1]_PWR_8_o_wide_mux_87_OUT>
+    Found 4-bit comparator greater for signal <GND_9_o_n1d[3]_LessThan_43_o> created at line 153
+    Found 4-bit comparator equal for signal <n1q_m[3]_n0q_m[3]_equal_61_o> created at line 196
+    Found 4-bit comparator greater for signal <n0q_m[3]_n1q_m[3]_LessThan_62_o> created at line 197
+    Found 4-bit comparator greater for signal <n1q_m[3]_n0q_m[3]_LessThan_63_o> created at line 198
+    Summary:
+	inferred   1 RAM(s).
+	inferred  23 Adder/Subtractor(s).
+	inferred  27 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+	inferred  38 Multiplexer(s).
+Unit <tmds_encoder_1> synthesized.
+
+Synthesizing Unit <tmds_encoder_2>.
+    Related source file is "/home/xilinx/Desktop/GBADVI/src/DVI720p/TMDS_encoder.vhd".
+        CHANNEL = 1
+    Found 1-bit register for signal <de_reg>.
+    Found 9-bit register for signal <q_m_reg>.
+    Found 10-bit register for signal <tmds>.
+    Found 5-bit register for signal <cnt>.
+    Found 4-bit adder for signal <n0316> created at line 143.
+    Found 4-bit adder for signal <n0319> created at line 143.
+    Found 4-bit adder for signal <n0322> created at line 143.
+    Found 4-bit adder for signal <n0325> created at line 143.
+    Found 4-bit adder for signal <n0328> created at line 143.
+    Found 4-bit adder for signal <n0331> created at line 143.
+    Found 4-bit adder for signal <n1d> created at line 143.
+    Found 4-bit adder for signal <n0337> created at line 187.
+    Found 4-bit adder for signal <n0340> created at line 187.
+    Found 4-bit adder for signal <n0343> created at line 187.
+    Found 4-bit adder for signal <n0346> created at line 187.
+    Found 4-bit adder for signal <n0349> created at line 187.
+    Found 4-bit adder for signal <n0352> created at line 187.
+    Found 4-bit adder for signal <n1q_m> created at line 187.
+    Found 5-bit adder for signal <n0363> created at line 239.
+    Found 5-bit adder for signal <cnt[4]_GND_10_o_add_75_OUT> created at line 239.
+    Found 5-bit adder for signal <GND_10_o_GND_10_o_add_81_OUT> created at line 249.
+    Found 5-bit adder for signal <cnt[4]_GND_10_o_add_83_OUT> created at line 252.
+    Found 4-bit subtractor for signal <n0q_m> created at line 34.
+    Found 5-bit subtractor for signal <n0369> created at line 0.
+    Found 5-bit subtractor for signal <n0370> created at line 0.
+    Found 5-bit subtractor for signal <_n0389> created at line 0.
+    Found 5-bit adder for signal <GND_10_o_GND_10_o_sub_69_OUT<4:0>> created at line 242.
+    Found 4-bit comparator greater for signal <GND_10_o_n1d[3]_LessThan_43_o> created at line 153
+    Found 4-bit comparator equal for signal <n1q_m[3]_n0q_m[3]_equal_61_o> created at line 196
+    Found 4-bit comparator greater for signal <n0q_m[3]_n1q_m[3]_LessThan_62_o> created at line 197
+    Found 4-bit comparator greater for signal <n1q_m[3]_n0q_m[3]_LessThan_63_o> created at line 198
+    WARNING:Xst:2404 -  FFs/Latches <c_reg<1:0>> (without init value) have a constant value of 0 in block <tmds_encoder_2>.
+    Summary:
+	inferred  23 Adder/Subtractor(s).
+	inferred  25 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+	inferred  37 Multiplexer(s).
+Unit <tmds_encoder_2> synthesized.
+
+Synthesizing Unit <tmds_encoder_3>.
+    Related source file is "/home/xilinx/Desktop/GBADVI/src/DVI720p/TMDS_encoder.vhd".
+        CHANNEL = 2
+    Found 1-bit register for signal <de_reg>.
+    Found 9-bit register for signal <q_m_reg>.
+    Found 10-bit register for signal <tmds>.
+    Found 5-bit register for signal <cnt>.
+    Found 4-bit adder for signal <n0316> created at line 143.
+    Found 4-bit adder for signal <n0319> created at line 143.
+    Found 4-bit adder for signal <n0322> created at line 143.
+    Found 4-bit adder for signal <n0325> created at line 143.
+    Found 4-bit adder for signal <n0328> created at line 143.
+    Found 4-bit adder for signal <n0331> created at line 143.
+    Found 4-bit adder for signal <n1d> created at line 143.
+    Found 4-bit adder for signal <n0337> created at line 187.
+    Found 4-bit adder for signal <n0340> created at line 187.
+    Found 4-bit adder for signal <n0343> created at line 187.
+    Found 4-bit adder for signal <n0346> created at line 187.
+    Found 4-bit adder for signal <n0349> created at line 187.
+    Found 4-bit adder for signal <n0352> created at line 187.
+    Found 4-bit adder for signal <n1q_m> created at line 187.
+    Found 5-bit adder for signal <n0363> created at line 239.
+    Found 5-bit adder for signal <cnt[4]_GND_11_o_add_75_OUT> created at line 239.
+    Found 5-bit adder for signal <GND_11_o_GND_11_o_add_81_OUT> created at line 249.
+    Found 5-bit adder for signal <cnt[4]_GND_11_o_add_83_OUT> created at line 252.
+    Found 4-bit subtractor for signal <n0q_m> created at line 34.
+    Found 5-bit subtractor for signal <n0369> created at line 0.
+    Found 5-bit subtractor for signal <n0370> created at line 0.
+    Found 5-bit subtractor for signal <_n0389> created at line 0.
+    Found 5-bit adder for signal <GND_11_o_GND_11_o_sub_69_OUT<4:0>> created at line 242.
+    Found 4-bit comparator greater for signal <GND_11_o_n1d[3]_LessThan_43_o> created at line 153
+    Found 4-bit comparator equal for signal <n1q_m[3]_n0q_m[3]_equal_61_o> created at line 196
+    Found 4-bit comparator greater for signal <n0q_m[3]_n1q_m[3]_LessThan_62_o> created at line 197
+    Found 4-bit comparator greater for signal <n1q_m[3]_n0q_m[3]_LessThan_63_o> created at line 198
+    WARNING:Xst:2404 -  FFs/Latches <c_reg<1:0>> (without init value) have a constant value of 0 in block <tmds_encoder_3>.
+    Summary:
+	inferred  23 Adder/Subtractor(s).
+	inferred  25 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+	inferred  37 Multiplexer(s).
+Unit <tmds_encoder_3> synthesized.
+
+Synthesizing Unit <hdmi_phy>.
+    Related source file is "/home/xilinx/Desktop/GBADVI/src/DVI720p/PHY/hdmi_phy.vhd".
+    Found 5-bit register for signal <tmds_data<3>>.
+    Summary:
+	inferred   5 D-type flip-flop(s).
+Unit <hdmi_phy> synthesized.
+
+Synthesizing Unit <bram30to15>.
+    Related source file is "/home/xilinx/Desktop/GBADVI/src/DVI720p/PHY/bram30to15.vhd".
+    Set property "ASYNC_REG = TRUE" for signal <rstsync>.
+    Found 1-bit register for signal <rstsync>.
+    Found 4-bit register for signal <ra_d>.
+    Found 4-bit register for signal <wa_d>.
+    Found 1-bit register for signal <sync>.
+    Found 1-bit register for signal <rstsync_q>.
+    Found 1-bit register for signal <rstp>.
+    Found 30-bit register for signal <db>.
+    Found 15-bit register for signal <dataout>.
+    Found 4-bit adder for signal <wa_d[3]_GND_13_o_add_0_OUT> created at line 1241.
+    Found 4-bit adder for signal <ra_d[3]_GND_13_o_add_3_OUT> created at line 1241.
+INFO:Xst:2774 - HDL ADVISOR - KEEP property attached to signal rst may hinder XST clustering optimizations.
+INFO:Xst:2774 - HDL ADVISOR - ASYNC_REG property attached to signal rstsync may hinder XST clustering optimizations.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  57 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <bram30to15> synthesized.
+
+Synthesizing Unit <serdes5to1>.
+    Related source file is "/home/xilinx/Desktop/GBADVI/src/DVI720p/PHY/serdes5to1.vhd".
+    Summary:
+	no macro.
+Unit <serdes5to1> synthesized.
+
+Synthesizing Unit <gba_axis>.
+    Related source file is "/home/xilinx/Desktop/GBADVI/src/GBA/gba_axis.vhd".
+        X_RES = 240
+        Y_RES = 160
+    Found 3-bit register for signal <hs_sr>.
+    Found 3-bit register for signal <vs_sr>.
+    Found 1-bit register for signal <user_drv>.
+    Found 1-bit register for signal <last_drv>.
+    Found 32-bit register for signal <m_axis_tdata>.
+    Found 1-bit register for signal <valid_drv>.
+    Found 3-bit register for signal <clk_sr>.
+    Found 24-bit register for signal <vdata>.
+    WARNING:Xst:2404 -  FFs/Latches <vdata<31:24>> (without init value) have a constant value of 0 in block <gba_axis>.
+    Summary:
+	inferred  68 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+Unit <gba_axis> synthesized.
+
+Synthesizing Unit <packer>.
+    Related source file is "/home/xilinx/Desktop/GBADVI/src/packer.vhd".
+        X_RES = 240
+        Y_RES = 160
+    Found 8-bit register for signal <line_cnt>.
+    Found 1-bit register for signal <curr_buf>.
+    Found 8-bit register for signal <pixel_cnt>.
+    Found 8-bit adder for signal <line_cnt[7]_GND_31_o_add_0_OUT> created at line 1241.
+    Found 8-bit adder for signal <pixel_cnt[7]_GND_31_o_add_1_OUT> created at line 1241.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  17 D-type flip-flop(s).
+Unit <packer> synthesized.
+
+Synthesizing Unit <sdram>.
+    Related source file is "/home/xilinx/Desktop/GBADVI/src/SDRAM/sdram.v".
+    Set property "IOB = TRUE" for signal <cmd_q>.
+    Set property "IOB = TRUE" for signal <ba_q>.
+    Set property "IOB = TRUE" for signal <a_q>.
+    Set property "IOB = TRUE" for signal <dq_q>.
+    Set property "IOB = TRUE" for signal <dqi_q>.
+    Set property "IOB = TRUE" for signal <cle_q>.
+    Set property "IOB = TRUE" for signal <dqm_q>.
+    Found 1-bit register for signal <dq_en_q>.
+    Found 4-bit register for signal <state_q>.
+    Found 1-bit register for signal <ready_q>.
+    Found 1-bit register for signal <saved_rw_q>.
+    Found 32-bit register for signal <saved_data_q>.
+    Found 23-bit register for signal <saved_addr_q>.
+    Found 4-bit register for signal <cmd_q>.
+    Found 2-bit register for signal <ba_q>.
+    Found 13-bit register for signal <a_q>.
+    Found 8-bit register for signal <dq_q>.
+    Found 8-bit register for signal <dqi_q>.
+    Found 4-bit register for signal <next_state_q>.
+    Found 1-bit register for signal <refresh_flag_q>.
+    Found 10-bit register for signal <refresh_ctr_q>.
+    Found 32-bit register for signal <data_q>.
+    Found 23-bit register for signal <addr_q>.
+    Found 1-bit register for signal <out_valid_q>.
+    Found 4-bit register for signal <row_open_q>.
+    Found 52-bit register for signal <n0170[51:0]>.
+    Found 3-bit register for signal <precharge_bank_q>.
+    Found 1-bit register for signal <rw_op_q>.
+    Found 2-bit register for signal <byte_ctr_q>.
+    Found 16-bit register for signal <delay_ctr_q>.
+    Found 16-bit subtractor for signal <delay_ctr_q[15]_GND_32_o_sub_10_OUT> created at line 238.
+    Found 10-bit adder for signal <refresh_ctr_q[9]_GND_32_o_add_4_OUT> created at line 202.
+    Found 2-bit adder for signal <byte_ctr_q[1]_GND_32_o_add_46_OUT> created at line 362.
+    Found 1-bit 4-to-1 multiplexer for signal <saved_addr_q[9]_row_open_q[3]_Mux_16_o> created at line 296.
+    Found 13-bit 4-to-1 multiplexer for signal <saved_addr_q[9]_row_addr_q[3][12]_wide_mux_17_OUT> created at line 297.
+    Found 1-bit tristate buffer for signal <sdram_dq<7>> created at line 141
+    Found 1-bit tristate buffer for signal <sdram_dq<6>> created at line 141
+    Found 1-bit tristate buffer for signal <sdram_dq<5>> created at line 141
+    Found 1-bit tristate buffer for signal <sdram_dq<4>> created at line 141
+    Found 1-bit tristate buffer for signal <sdram_dq<3>> created at line 141
+    Found 1-bit tristate buffer for signal <sdram_dq<2>> created at line 141
+    Found 1-bit tristate buffer for signal <sdram_dq<1>> created at line 141
+    Found 1-bit tristate buffer for signal <sdram_dq<0>> created at line 141
+    Found 10-bit comparator greater for signal <PWR_61_o_refresh_ctr_q[9]_LessThan_6_o> created at line 203
+    Found 13-bit comparator equal for signal <saved_addr_q[9]_saved_addr_q[22]_equal_19_o> created at line 297
+    WARNING:Xst:2404 -  FFs/Latches <dqm_q<0:0>> (without init value) have a constant value of 0 in block <sdram>.
+INFO:Xst:2774 - HDL ADVISOR - IOB property attached to signal dqm_q may hinder XST clustering optimizations.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred 246 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred  86 Multiplexer(s).
+	inferred   8 Tristate(s).
+Unit <sdram> synthesized.
+
+Synthesizing Unit <sdram_ctrl>.
+    Related source file is "/home/xilinx/Desktop/GBADVI/src/SDRAM/sdram_ctrl.vhd".
+WARNING:Xst:647 - Input <s0_axis_tdest<22:22>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <s1_axis_tdest<22:22>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <aclk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:737 - Found 1-bit latch for signal <ach>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   1 Latch(s).
+	inferred   1 Multiplexer(s).
+Unit <sdram_ctrl> synthesized.
+
+Synthesizing Unit <loader>.
+    Related source file is "/home/xilinx/Desktop/GBADVI/src/loader.vhd".
+        X_RES = 250
+        Y_RES = 170
+    Found 3-bit register for signal <start_sr>.
+    Found 1-bit register for signal <line_start_i>.
+    Found 8-bit register for signal <line_num_i>.
+    Found 1-bit register for signal <curr_buf>.
+    Found 1-bit register for signal <transfer_start>.
+    Found 8-bit register for signal <pixel_cnt>.
+    Found 1-bit register for signal <sm_state>.
+    Found 8-bit register for signal <start_pulse_sr>.
+    Found 8-bit adder for signal <pixel_cnt[7]_GND_46_o_add_7_OUT> created at line 1241.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  31 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <loader> synthesized.
+
+Synthesizing Unit <nes_controller>.
+    Related source file is "/home/xilinx/Desktop/GBADVI/src/controllers/nes_controller.vhd".
+        C_CLK_DIV = 106
+    Found 1-bit register for signal <half>.
+    Found 1-bit register for signal <nes_latch>.
+    Found 1-bit register for signal <nes_clock>.
+    Found 16-bit register for signal <shifter>.
+    Found 4-bit register for signal <bits_cnt>.
+    Found 2-bit register for signal <sm_state>.
+    Found 16-bit register for signal <data_out>.
+    Found 6-bit register for signal <clk_cnt>.
+    Found finite state machine <FSM_0> for signal <sm_state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Power Up State     | st_start                                       |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 6-bit adder for signal <clk_cnt[5]_GND_48_o_add_1_OUT> created at line 43.
+    Found 4-bit adder for signal <bits_cnt[3]_GND_48_o_add_8_OUT> created at line 78.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  45 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <nes_controller> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4x10-bit single-port Read Only RAM                    : 1
+# Adders/Subtractors                                   : 94
+ 10-bit adder                                          : 6
+ 11-bit adder                                          : 4
+ 16-bit subtractor                                     : 1
+ 2-bit adder                                           : 4
+ 4-bit adder                                           : 45
+ 4-bit subtractor                                      : 3
+ 5-bit adder                                           : 15
+ 5-bit subtractor                                      : 9
+ 6-bit adder                                           : 1
+ 8-bit adder                                           : 5
+ 9-bit adder                                           : 1
+# Registers                                            : 83
+ 1-bit register                                        : 26
+ 10-bit register                                       : 5
+ 11-bit register                                       : 1
+ 13-bit register                                       : 1
+ 15-bit register                                       : 1
+ 16-bit register                                       : 3
+ 2-bit register                                        : 7
+ 23-bit register                                       : 2
+ 24-bit register                                       : 1
+ 3-bit register                                        : 5
+ 30-bit register                                       : 1
+ 32-bit register                                       : 3
+ 4-bit register                                        : 7
+ 5-bit register                                        : 4
+ 52-bit register                                       : 1
+ 6-bit register                                        : 1
+ 8-bit register                                        : 10
+ 9-bit register                                        : 4
+# Latches                                              : 1
+ 1-bit latch                                           : 1
+# Comparators                                          : 27
+ 10-bit comparator greater                             : 5
+ 10-bit comparator lessequal                           : 3
+ 11-bit comparator equal                               : 1
+ 11-bit comparator greater                             : 3
+ 11-bit comparator lessequal                           : 2
+ 13-bit comparator equal                               : 1
+ 4-bit comparator equal                                : 3
+ 4-bit comparator greater                              : 9
+# Multiplexers                                         : 207
+ 1-bit 2-to-1 multiplexer                              : 124
+ 1-bit 4-to-1 multiplexer                              : 1
+ 10-bit 2-to-1 multiplexer                             : 2
+ 13-bit 2-to-1 multiplexer                             : 14
+ 13-bit 4-to-1 multiplexer                             : 1
+ 15-bit 2-to-1 multiplexer                             : 1
+ 16-bit 2-to-1 multiplexer                             : 6
+ 2-bit 2-to-1 multiplexer                              : 2
+ 23-bit 2-to-1 multiplexer                             : 1
+ 24-bit 2-to-1 multiplexer                             : 1
+ 3-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 4
+ 4-bit 2-to-1 multiplexer                              : 33
+ 5-bit 2-to-1 multiplexer                              : 15
+ 8-bit 2-to-1 multiplexer                              : 1
+# Tristates                                            : 8
+ 1-bit tristate buffer                                 : 8
+# FSMs                                                 : 1
+# Xors                                                 : 42
+ 1-bit xor2                                            : 42
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/packer_fifo.ngc>.
+Reading core <ipcore_dir/line_buffer.ngc>.
+Loading core <packer_fifo> for timing and area information for instance <gba_to_ram_fifo>.
+Loading core <line_buffer> for timing and area information for instance <line_buf>.
+INFO:Xst:2261 - The FF/Latch <vdata_0> in Unit <gba_if_inst> is equivalent to the following 8 FFs/Latches, which will be removed : <vdata_1> <vdata_2> <vdata_8> <vdata_9> <vdata_10> <vdata_16> <vdata_17> <vdata_18> 
+WARNING:Xst:1710 - FF/Latch <vdata_0> (without init value) has a constant value of 0 in block <gba_if_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <data_out_1> of sequential type is unconnected in block <ctrl_inst>.
+WARNING:Xst:2677 - Node <data_out_9> of sequential type is unconnected in block <ctrl_inst>.
+WARNING:Xst:2677 - Node <data_out_12> of sequential type is unconnected in block <ctrl_inst>.
+WARNING:Xst:2677 - Node <data_out_13> of sequential type is unconnected in block <ctrl_inst>.
+WARNING:Xst:2677 - Node <data_out_14> of sequential type is unconnected in block <ctrl_inst>.
+WARNING:Xst:2677 - Node <data_out_15> of sequential type is unconnected in block <ctrl_inst>.
+
+Synthesizing (advanced) Unit <bram30to15>.
+The following registers are absorbed into counter <wa_d>: 1 register on signal <wa_d>.
+The following registers are absorbed into counter <ra_d>: 1 register on signal <ra_d>.
+Unit <bram30to15> synthesized (advanced).
+
+Synthesizing (advanced) Unit <dvi_video_720p>.
+The following registers are absorbed into counter <CounterX>: 1 register on signal <CounterX>.
+The following registers are absorbed into counter <CounterY>: 1 register on signal <CounterY>.
+Unit <dvi_video_720p> synthesized (advanced).
+
+Synthesizing (advanced) Unit <loader>.
+The following registers are absorbed into counter <pixel_cnt>: 1 register on signal <pixel_cnt>.
+Unit <loader> synthesized (advanced).
+
+Synthesizing (advanced) Unit <nes_controller>.
+The following registers are absorbed into counter <clk_cnt>: 1 register on signal <clk_cnt>.
+The following registers are absorbed into counter <bits_cnt>: 1 register on signal <bits_cnt>.
+Unit <nes_controller> synthesized (advanced).
+
+Synthesizing (advanced) Unit <packer>.
+The following registers are absorbed into counter <line_cnt>: 1 register on signal <line_cnt>.
+The following registers are absorbed into counter <pixel_cnt>: 1 register on signal <pixel_cnt>.
+Unit <packer> synthesized (advanced).
+
+Synthesizing (advanced) Unit <sdram>.
+The following registers are absorbed into counter <refresh_ctr_q>: 1 register on signal <refresh_ctr_q>.
+The following registers are absorbed into counter <byte_ctr_q>: 1 register on signal <byte_ctr_q>.
+Unit <sdram> synthesized (advanced).
+
+Synthesizing (advanced) Unit <tmds_encoder_1>.
+	The following adders/subtractors are grouped into adder tree <Madd_n1q_m_Madd1> :
+ 	<Madd_n0337> in block <tmds_encoder_1>, 	<Madd_n0343_Madd> in block <tmds_encoder_1>, 	<Madd_n0349_Madd> in block <tmds_encoder_1>, 	<Madd_n1q_m_Madd> in block <tmds_encoder_1>.
+	The following adders/subtractors are grouped into adder tree <Madd_n1d_Madd1> :
+ 	<Madd_n0316> in block <tmds_encoder_1>, 	<Madd_n0322_Madd> in block <tmds_encoder_1>, 	<Madd_n0328_Madd> in block <tmds_encoder_1>, 	<Madd_n1d_Madd> in block <tmds_encoder_1>.
+INFO:Xst:3231 - The small RAM <Mram_c_reg[1]_PWR_8_o_wide_mux_87_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 10-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <c_reg>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <tmds_encoder_1> synthesized (advanced).
+
+Synthesizing (advanced) Unit <tmds_encoder_2>.
+	The following adders/subtractors are grouped into adder tree <Madd_n1q_m_Madd1> :
+ 	<Madd_n0337> in block <tmds_encoder_2>, 	<Madd_n0343_Madd> in block <tmds_encoder_2>, 	<Madd_n0349_Madd> in block <tmds_encoder_2>, 	<Madd_n1q_m_Madd> in block <tmds_encoder_2>.
+	The following adders/subtractors are grouped into adder tree <Madd_n1d_Madd1> :
+ 	<Madd_n0316> in block <tmds_encoder_2>, 	<Madd_n0322_Madd> in block <tmds_encoder_2>, 	<Madd_n0328_Madd> in block <tmds_encoder_2>, 	<Madd_n1d_Madd> in block <tmds_encoder_2>.
+Unit <tmds_encoder_2> synthesized (advanced).
+
+Synthesizing (advanced) Unit <tmds_encoder_3>.
+	The following adders/subtractors are grouped into adder tree <Madd_n1q_m_Madd1> :
+ 	<Madd_n0337> in block <tmds_encoder_3>, 	<Madd_n0343_Madd> in block <tmds_encoder_3>, 	<Madd_n0349_Madd> in block <tmds_encoder_3>, 	<Madd_n1q_m_Madd> in block <tmds_encoder_3>.
+	The following adders/subtractors are grouped into adder tree <Madd_n1d_Madd1> :
+ 	<Madd_n0316> in block <tmds_encoder_3>, 	<Madd_n0322_Madd> in block <tmds_encoder_3>, 	<Madd_n0328_Madd> in block <tmds_encoder_3>, 	<Madd_n1d_Madd> in block <tmds_encoder_3>.
+Unit <tmds_encoder_3> synthesized (advanced).
+
+Synthesizing (advanced) Unit <top>.
+The following registers are absorbed into counter <h_scale_cnt>: 1 register on signal <h_scale_cnt>.
+The following registers are absorbed into counter <hdmi_line_cnt>: 1 register on signal <hdmi_line_cnt>.
+The following registers are absorbed into counter <h_line_cnt>: 1 register on signal <h_line_cnt>.
+The following registers are absorbed into counter <v_scale_cnt>: 1 register on signal <v_scale_cnt>.
+The following registers are absorbed into counter <line_scale_cnt>: 1 register on signal <line_scale_cnt>.
+The following registers are absorbed into counter <rd_addr_cnt>: 1 register on signal <rd_addr_cnt>.
+Unit <top> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4x10-bit single-port distributed Read Only RAM        : 1
+# Adders/Subtractors                                   : 35
+ 10-bit adder                                          : 4
+ 11-bit adder                                          : 3
+ 16-bit subtractor                                     : 1
+ 4-bit subtractor                                      : 3
+ 5-bit adder                                           : 15
+ 5-bit subtractor                                      : 9
+# Adder Trees                                          : 6
+ 4-bit / 5-inputs adder tree                           : 6
+# Counters                                             : 17
+ 10-bit up counter                                     : 2
+ 11-bit up counter                                     : 1
+ 2-bit up counter                                      : 4
+ 4-bit up counter                                      : 3
+ 6-bit up counter                                      : 1
+ 8-bit up counter                                      : 5
+ 9-bit up counter                                      : 1
+# Registers                                            : 504
+ Flip-Flops                                            : 504
+# Comparators                                          : 27
+ 10-bit comparator greater                             : 5
+ 10-bit comparator lessequal                           : 3
+ 11-bit comparator equal                               : 1
+ 11-bit comparator greater                             : 3
+ 11-bit comparator lessequal                           : 2
+ 13-bit comparator equal                               : 1
+ 4-bit comparator equal                                : 3
+ 4-bit comparator greater                              : 9
+# Multiplexers                                         : 267
+ 1-bit 2-to-1 multiplexer                              : 180
+ 1-bit 4-to-1 multiplexer                              : 14
+ 10-bit 2-to-1 multiplexer                             : 1
+ 13-bit 2-to-1 multiplexer                             : 10
+ 15-bit 2-to-1 multiplexer                             : 1
+ 16-bit 2-to-1 multiplexer                             : 6
+ 2-bit 2-to-1 multiplexer                              : 2
+ 23-bit 2-to-1 multiplexer                             : 1
+ 24-bit 2-to-1 multiplexer                             : 1
+ 3-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 4
+ 4-bit 2-to-1 multiplexer                              : 31
+ 5-bit 2-to-1 multiplexer                              : 15
+# FSMs                                                 : 1
+# Xors                                                 : 42
+ 1-bit xor2                                            : 42
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <vdata_0> (without init value) has a constant value of 0 in block <gba_axis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vdata_1> (without init value) has a constant value of 0 in block <gba_axis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vdata_2> (without init value) has a constant value of 0 in block <gba_axis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vdata_8> (without init value) has a constant value of 0 in block <gba_axis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vdata_9> (without init value) has a constant value of 0 in block <gba_axis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vdata_10> (without init value) has a constant value of 0 in block <gba_axis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vdata_16> (without init value) has a constant value of 0 in block <gba_axis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vdata_17> (without init value) has a constant value of 0 in block <gba_axis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vdata_18> (without init value) has a constant value of 0 in block <gba_axis>. This FF/Latch will be trimmed during the optimization process.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <ctrl_inst/FSM_0> on signal <sm_state[1:2]> with user encoding.
+----------------------
+ State    | Encoding
+----------------------
+ st_start | 00
+ st_wait  | 01
+ st_low   | 10
+ st_high  | 11
+----------------------
+WARNING:Xst:1293 - FF/Latch <m_axis_tdata_0> has a constant value of 0 in block <gba_axis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <m_axis_tdata_1> has a constant value of 0 in block <gba_axis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <m_axis_tdata_16> has a constant value of 0 in block <gba_axis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <m_axis_tdata_17> has a constant value of 0 in block <gba_axis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <m_axis_tdata_24> has a constant value of 0 in block <gba_axis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <m_axis_tdata_25> has a constant value of 0 in block <gba_axis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <m_axis_tdata_26> has a constant value of 0 in block <gba_axis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <m_axis_tdata_27> has a constant value of 0 in block <gba_axis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <m_axis_tdata_28> has a constant value of 0 in block <gba_axis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <m_axis_tdata_29> has a constant value of 0 in block <gba_axis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <m_axis_tdata_30> has a constant value of 0 in block <gba_axis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <m_axis_tdata_31> has a constant value of 0 in block <gba_axis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cmd_q_3> (without init value) has a constant value of 0 in block <sdram>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <h_line_cnt_1> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <h_line_cnt_2> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <h_line_cnt_3> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <h_line_cnt_4> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <h_line_cnt_5> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <h_line_cnt_6> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <h_line_cnt_7> of sequential type is unconnected in block <top>.
+INFO:Xst:1901 - Instance pll_base_inst in unit pll_base_inst of type PLL_BASE has been replaced by PLL_ADV
+INFO:Xst:2261 - The FF/Latch <m_axis_tdata_8> in Unit <gba_axis> is equivalent to the following 2 FFs/Latches, which will be removed : <m_axis_tdata_9> <m_axis_tdata_10> 
+WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
+   incompatible with the Spartan6 architecture. The two primary causes of this is
+   either a register or latch described with both an asynchronous set and
+   asynchronous reset, or a register or latch described with an asynchronous
+   set or reset which however has an initialization value of the opposite 
+   polarity (i.e. asynchronous reset with an initialization value of 1).
+    While this circuit can be built, it creates a sub-optimal implementation
+   in terms of area, power and performance. For a more optimal implementation
+   Xilinx highly recommends one of the following:
+
+          1) Remove either the set or reset from all registers and latches
+             if not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Ensure all registers have the same initialization value as the
+             described asynchronous set or reset polarity
+          4) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    ach in unit <sdram_ctrl>
+
+
+Optimizing unit <top> ...
+
+Optimizing unit <gba_axis> ...
+
+Optimizing unit <clk_sys> ...
+
+Optimizing unit <nes_controller> ...
+
+Optimizing unit <dvi_video_720p> ...
+
+Optimizing unit <tmds_encoder_1> ...
+WARNING:Xst:1293 - FF/Latch <cnt_0> has a constant value of 0 in block <tmds_encoder_1>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <tmds_encoder_2> ...
+WARNING:Xst:1293 - FF/Latch <cnt_0> has a constant value of 0 in block <tmds_encoder_2>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <tmds_encoder_3> ...
+WARNING:Xst:1293 - FF/Latch <cnt_0> has a constant value of 0 in block <tmds_encoder_3>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <hdmi_phy> ...
+
+Optimizing unit <bram30to15> ...
+
+Optimizing unit <loader> ...
+
+Optimizing unit <packer> ...
+
+Optimizing unit <sdram_ctrl> ...
+WARNING:Xst:1710 - FF/Latch <sdram_inst/saved_addr_q_7> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sdram_inst/saved_addr_q_18> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sdram_inst/saved_addr_q_19> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sdram_inst/saved_addr_q_20> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sdram_inst/saved_addr_q_21> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sdram_inst/saved_addr_q_22> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sdram_inst/row_addr_q_0_8> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sdram_inst/row_addr_q_0_9> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sdram_inst/row_addr_q_0_10> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sdram_inst/row_addr_q_0_11> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sdram_inst/row_addr_q_0_12> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sdram_inst/row_addr_q_0_21> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sdram_inst/row_addr_q_0_22> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sdram_inst/row_addr_q_0_23> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sdram_inst/a_q_12> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sdram_inst/a_q_11> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sdram_inst/a_q_9> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sdram_inst/row_addr_q_0_51> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sdram_inst/row_addr_q_0_50> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sdram_inst/row_addr_q_0_49> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sdram_inst/row_addr_q_0_48> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sdram_inst/row_addr_q_0_47> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sdram_inst/row_addr_q_0_38> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sdram_inst/row_addr_q_0_37> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sdram_inst/row_addr_q_0_36> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sdram_inst/row_addr_q_0_35> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sdram_inst/row_addr_q_0_34> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sdram_inst/row_addr_q_0_25> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sdram_inst/row_addr_q_0_24> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sdram_inst/addr_q_22> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sdram_inst/addr_q_21> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sdram_inst/addr_q_20> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sdram_inst/addr_q_19> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sdram_inst/addr_q_18> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sdram_inst/addr_q_7> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <ctrl_inst/data_out_15> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <ctrl_inst/data_out_14> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <ctrl_inst/data_out_13> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <ctrl_inst/data_out_12> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <ctrl_inst/data_out_9> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <ctrl_inst/data_out_1> of sequential type is unconnected in block <top>.
+INFO:Xst:2261 - The FF/Latch <hdmi_inst/lane_gen[0].encoder_inst/de_reg> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <hdmi_inst/lane_gen[1].encoder_inst/de_reg> <hdmi_inst/lane_gen[2].encoder_inst/de_reg> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 22.
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <gba_to_ram_fifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <gba_to_ram_fifo> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <gba_to_ram_fifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <gba_to_ram_fifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <gba_to_ram_fifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <gba_to_ram_fifo> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <gba_to_ram_fifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <gba_to_ram_fifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+
+Final Macro Processing ...
+
+Processing Unit <top> :
+	Found 2-bit shift register for signal <gba_if_inst/vs_sr_1>.
+	Found 2-bit shift register for signal <gba_if_inst/hs_sr_1>.
+	Found 2-bit shift register for signal <gba_if_inst/clk_sr_1>.
+	Found 5-bit shift register for signal <ctrl_inst/shifter_11>.
+	Found 2-bit shift register for signal <ctrl_inst/shifter_8>.
+	Found 2-bit shift register for signal <ctrl_inst/shifter_0>.
+	Found 2-bit shift register for signal <hdmi_inst/hdmi_phy_inst/pixel2x/rstp>.
+	Found 2-bit shift register for signal <loader_inst/start_sr_1>.
+INFO:Xst:741 - HDL ADVISOR - A 7-bit shift register was found for signal <loader_inst/start_pulse_sr_0> and currently occupies 7 logic cells (3 slices). Removing the set/reset logic would take advantage of SRL32 (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
+Unit <top> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 516
+ Flip-Flops                                            : 516
+# Shift Registers                                      : 8
+ 2-bit shift register                                  : 7
+ 5-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1273
+#      GND                         : 4
+#      INV                         : 69
+#      LUT1                        : 75
+#      LUT2                        : 100
+#      LUT3                        : 128
+#      LUT4                        : 163
+#      LUT5                        : 147
+#      LUT6                        : 308
+#      MUXCY                       : 161
+#      MUXF7                       : 4
+#      VCC                         : 3
+#      XORCY                       : 111
+# FlipFlops/Latches                : 735
+#      FD                          : 128
+#      FDC                         : 104
+#      FDCE                        : 58
+#      FDE                         : 308
+#      FDP                         : 16
+#      FDPE                        : 2
+#      FDR                         : 54
+#      FDRE                        : 54
+#      FDS                         : 9
+#      LD                          : 1
+#      ODDR2                       : 1
+# RAMS                             : 39
+#      RAM16X1D                    : 30
+#      RAMB16BWER                  : 9
+# Shift Registers                  : 8
+#      SRLC16E                     : 8
+# Clock Buffers                    : 5
+#      BUFG                        : 5
+# IO Buffers                       : 66
+#      IBUF                        : 20
+#      IOBUF                       : 8
+#      OBUF                        : 34
+#      OBUFDS                      : 4
+# Others                           : 11
+#      BUFPLL                      : 1
+#      IODELAY2                    : 1
+#      OSERDES2                    : 8
+#      PLL_ADV                     : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             704  out of  11440     6%  
+ Number of Slice LUTs:                 1058  out of   5720    18%  
+    Number used as Logic:               990  out of   5720    17%  
+    Number used as Memory:               68  out of   1440     4%  
+       Number used as RAM:               60
+       Number used as SRL:                8
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1317
+   Number with an unused Flip Flop:     613  out of   1317    46%  
+   Number with an unused LUT:           259  out of   1317    19%  
+   Number of fully used LUT-FF pairs:   445  out of   1317    33%  
+   Number of unique control sets:        59
+
+IO Utilization: 
+ Number of IOs:                          70
+ Number of bonded IOBs:                  70  out of    102    68%  
+    IOB Flip Flops/Latches:              31
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                9  out of     32    28%  
+    Number using Block RAM only:          9
+ Number of BUFG/BUFGCTRLs:                5  out of     16    31%  
+ Number of PLL_ADVs:                      1  out of      2    50%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+----------------------------------------------+-----------------------------+-------+
+Clock Signal                                  | Clock buffer(FF name)       | Load  |
+----------------------------------------------+-----------------------------+-------+
+clk_sys_inst/pll_base_inst/CLKOUT2            | BUFG                        | 172   |
+clk_sys_inst/pll_base_inst/CLKOUT3            | BUFG                        | 553   |
+clk_sys_inst/pll_base_inst/CLKOUT1            | BUFG                        | 58    |
+sdram_ctrl_inst/ach_G(sdram_ctrl_inst/ach_G:O)| NONE(*)(sdram_ctrl_inst/ach)| 1     |
+----------------------------------------------+-----------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 15.716ns (Maximum Frequency: 63.630MHz)
+   Minimum input arrival time before clock: 2.083ns
+   Maximum output required time after clock: 5.316ns
+   Maximum combinational path delay: 3.593ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_sys_inst/pll_base_inst/CLKOUT2'
+  Clock period: 15.716ns (frequency: 63.630MHz)
+  Total number of paths / destination ports: 3296817 / 410
+-------------------------------------------------------------------------
+Delay:               15.716ns (Levels of Logic = 16)
+  Source:            hdmi_inst/CounterY_1 (FF)
+  Destination:       hdmi_inst/lane_gen[0].encoder_inst/cnt_4 (FF)
+  Source Clock:      clk_sys_inst/pll_base_inst/CLKOUT2 rising
+  Destination Clock: clk_sys_inst/pll_base_inst/CLKOUT2 rising
+
+  Data Path: hdmi_inst/CounterY_1 to hdmi_inst/lane_gen[0].encoder_inst/cnt_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            12   0.525   1.345  hdmi_inst/CounterY_1 (hdmi_inst/CounterY_1)
+     LUT4:I0->O            0   0.254   0.000  Mcompar_y_abs_pos[9]_screen_start_y[9]_LessThan_11_o_lutdi (Mcompar_y_abs_pos[9]_screen_start_y[9]_LessThan_11_o_lutdi)
+     MUXCY:DI->O           1   0.181   0.000  Mcompar_y_abs_pos[9]_screen_start_y[9]_LessThan_11_o_cy<0> (Mcompar_y_abs_pos[9]_screen_start_y[9]_LessThan_11_o_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_y_abs_pos[9]_screen_start_y[9]_LessThan_11_o_cy<1> (Mcompar_y_abs_pos[9]_screen_start_y[9]_LessThan_11_o_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_y_abs_pos[9]_screen_start_y[9]_LessThan_11_o_cy<2> (Mcompar_y_abs_pos[9]_screen_start_y[9]_LessThan_11_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_y_abs_pos[9]_screen_start_y[9]_LessThan_11_o_cy<3> (Mcompar_y_abs_pos[9]_screen_start_y[9]_LessThan_11_o_cy<3>)
+     MUXCY:CI->O          47   0.235   1.879  Mcompar_y_abs_pos[9]_screen_start_y[9]_LessThan_11_o_cy<4> (Mcompar_y_abs_pos[9]_screen_start_y[9]_LessThan_11_o_cy<4>)
+     LUT6:I4->O            3   0.250   0.766  hdmi_inst/lane_gen[0].encoder_inst/decision_a_SW2_SW0 (N302)
+     LUT6:I5->O           11   0.254   1.147  hdmi_inst/lane_gen[0].encoder_inst/decision_a_SW2 (N155)
+     LUT5:I3->O            1   0.250   0.790  hdmi_inst/lane_gen[0].encoder_inst/decision_a_SW10 (N316)
+     LUT6:I4->O            6   0.250   1.104  hdmi_inst/lane_gen[0].encoder_inst/ADDERTREE_INTERNAL_Madd6_cy<0>11 (hdmi_inst/lane_gen[0].encoder_inst/ADDERTREE_INTERNAL_Madd6_cy<0>)
+     LUT6:I3->O            6   0.235   0.876  hdmi_inst/lane_gen[0].encoder_inst/ADDERTREE_INTERNAL_Madd7_lut<0>11 (hdmi_inst/lane_gen[0].encoder_inst/ADDERTREE_INTERNAL_Madd7_lut<0>1)
+     LUT6:I5->O           10   0.254   1.008  hdmi_inst/lane_gen[0].encoder_inst/ADDERTREE_INTERNAL_Madd7_xor<0>34 (hdmi_inst/lane_gen[0].encoder_inst/ADDERTREE_INTERNAL_Madd_27)
+     LUT6:I5->O           17   0.254   1.317  hdmi_inst/lane_gen[0].encoder_inst/decision_b (hdmi_inst/lane_gen[0].encoder_inst/decision_b)
+     LUT3:I1->O            1   0.250   0.682  hdmi_inst/lane_gen[0].encoder_inst/Mmux_cnt[4]_GND_9_o_mux_86_OUT881 (hdmi_inst/lane_gen[0].encoder_inst/Mmux_cnt[4]_GND_9_o_mux_86_OUT88)
+     LUT6:I5->O            1   0.254   0.958  hdmi_inst/lane_gen[0].encoder_inst/Mmux_cnt[4]_GND_9_o_mux_86_OUT103 (hdmi_inst/lane_gen[0].encoder_inst/Mmux_cnt[4]_GND_9_o_mux_86_OUT106)
+     LUT4:I0->O            1   0.254   0.000  hdmi_inst/lane_gen[0].encoder_inst/Mmux_cnt[4]_GND_9_o_mux_86_OUT105 (hdmi_inst/lane_gen[0].encoder_inst/cnt[4]_GND_9_o_mux_86_OUT<4>)
+     FDR:D                     0.074          hdmi_inst/lane_gen[0].encoder_inst/cnt_4
+    ----------------------------------------
+    Total                     15.716ns (3.844ns logic, 11.872ns route)
+                                       (24.5% logic, 75.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_sys_inst/pll_base_inst/CLKOUT3'
+  Clock period: 7.710ns (frequency: 129.702MHz)
+  Total number of paths / destination ports: 5834 / 1348
+-------------------------------------------------------------------------
+Delay:               7.710ns (Levels of Logic = 10)
+  Source:            sdram_inst/saved_addr_q_8 (FF)
+  Destination:       sdram_inst/state_q_1 (FF)
+  Source Clock:      clk_sys_inst/pll_base_inst/CLKOUT3 rising
+  Destination Clock: clk_sys_inst/pll_base_inst/CLKOUT3 rising
+
+  Data Path: sdram_inst/saved_addr_q_8 to sdram_inst/state_q_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             11   0.525   1.494  sdram_inst/saved_addr_q_8 (sdram_inst/saved_addr_q_8)
+     LUT6:I0->O            1   0.254   1.137  sdram_inst/mux4111 (sdram_inst/saved_addr_q[9]_row_addr_q[3][12]_wide_mux_17_OUT<0>)
+     LUT6:I0->O            1   0.254   0.000  sdram_inst/Mcompar_saved_addr_q[9]_saved_addr_q[22]_equal_19_o_lut<0> (sdram_inst/Mcompar_saved_addr_q[9]_saved_addr_q[22]_equal_19_o_lut<0>)
+     MUXCY:S->O            1   0.215   0.000  sdram_inst/Mcompar_saved_addr_q[9]_saved_addr_q[22]_equal_19_o_cy<0> (sdram_inst/Mcompar_saved_addr_q[9]_saved_addr_q[22]_equal_19_o_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  sdram_inst/Mcompar_saved_addr_q[9]_saved_addr_q[22]_equal_19_o_cy<1> (sdram_inst/Mcompar_saved_addr_q[9]_saved_addr_q[22]_equal_19_o_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  sdram_inst/Mcompar_saved_addr_q[9]_saved_addr_q[22]_equal_19_o_cy<2> (sdram_inst/Mcompar_saved_addr_q[9]_saved_addr_q[22]_equal_19_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  sdram_inst/Mcompar_saved_addr_q[9]_saved_addr_q[22]_equal_19_o_cy<3> (sdram_inst/Mcompar_saved_addr_q[9]_saved_addr_q[22]_equal_19_o_cy<3>)
+     MUXCY:CI->O           5   0.235   1.117  sdram_inst/Mcompar_saved_addr_q[9]_saved_addr_q[22]_equal_19_o_cy<4> (sdram_inst/saved_addr_q[9]_saved_addr_q[22]_equal_19_o)
+     LUT4:I0->O            1   0.254   0.910  sdram_inst/Mmux_state_d41 (sdram_inst/Mmux_state_d4)
+     LUT6:I3->O            1   0.235   0.682  sdram_inst/Mmux_state_d42 (sdram_inst/Mmux_state_d41)
+     LUT5:I4->O            1   0.254   0.000  sdram_inst/Mmux_state_d43 (sdram_inst/state_d<1>)
+     FD:D                      0.074          sdram_inst/state_q_1
+    ----------------------------------------
+    Total                      7.710ns (2.370ns logic, 5.340ns route)
+                                       (30.7% logic, 69.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_sys_inst/pll_base_inst/CLKOUT1'
+  Clock period: 3.981ns (frequency: 251.218MHz)
+  Total number of paths / destination ports: 267 / 111
+-------------------------------------------------------------------------
+Delay:               3.981ns (Levels of Logic = 1)
+  Source:            hdmi_inst/hdmi_phy_inst/pixel2x/sync (FF)
+  Destination:       hdmi_inst/hdmi_phy_inst/pixel2x/db_29 (FF)
+  Source Clock:      clk_sys_inst/pll_base_inst/CLKOUT1 rising
+  Destination Clock: clk_sys_inst/pll_base_inst/CLKOUT1 rising
+
+  Data Path: hdmi_inst/hdmi_phy_inst/pixel2x/sync to hdmi_inst/hdmi_phy_inst/pixel2x/db_29
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             21   0.525   1.418  hdmi_inst/hdmi_phy_inst/pixel2x/sync (hdmi_inst/hdmi_phy_inst/pixel2x/sync)
+     LUT2:I0->O           30   0.250   1.486  hdmi_inst/hdmi_phy_inst/pixel2x/_n0043_inv1 (hdmi_inst/hdmi_phy_inst/pixel2x/_n0043_inv)
+     FDE:CE                    0.302          hdmi_inst/hdmi_phy_inst/pixel2x/db_0
+    ----------------------------------------
+    Total                      3.981ns (1.077ns logic, 2.904ns route)
+                                       (27.1% logic, 72.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_sys_inst/pll_base_inst/CLKOUT3'
+  Total number of paths / destination ports: 27 / 27
+-------------------------------------------------------------------------
+Offset:              2.083ns (Levels of Logic = 1)
+  Source:            sdram_dq<7> (PAD)
+  Destination:       sdram_inst/dqi_q_7 (FF)
+  Destination Clock: clk_sys_inst/pll_base_inst/CLKOUT3 rising
+
+  Data Path: sdram_dq<7> to sdram_inst/dqi_q_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O           1   1.328   0.681  sdram_dq_7_IOBUF (N54)
+     FD:D                      0.074          sdram_inst/dqi_q_7
+    ----------------------------------------
+    Total                      2.083ns (1.402ns logic, 0.681ns route)
+                                       (67.3% logic, 32.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_sys_inst/pll_base_inst/CLKOUT3'
+  Total number of paths / destination ports: 43 / 35
+-------------------------------------------------------------------------
+Offset:              5.316ns (Levels of Logic = 2)
+  Source:            sdram_inst/dq_en_q (FF)
+  Destination:       sdram_dq<7> (PAD)
+  Source Clock:      clk_sys_inst/pll_base_inst/CLKOUT3 rising
+
+  Data Path: sdram_inst/dq_en_q to sdram_dq<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.525   0.681  sdram_inst/dq_en_q (sdram_inst/dq_en_q)
+     INV:I->O              8   0.255   0.943  sdram_inst/dq_en_q_inv1_INV_0 (sdram_inst/dq_en_q_inv)
+     IOBUF:T->IO               2.912          sdram_dq_7_IOBUF (sdram_dq<7>)
+    ----------------------------------------
+    Total                      5.316ns (3.692ns logic, 1.624ns route)
+                                       (69.5% logic, 30.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_sys_inst/pll_base_inst/CLKOUT1'
+  Total number of paths / destination ports: 20 / 20
+-------------------------------------------------------------------------
+Offset:              1.250ns (Levels of Logic = 0)
+  Source:            hdmi_inst/hdmi_phy_inst/tmds_data_3_4 (FF)
+  Destination:       hdmi_inst/hdmi_phy_inst/serdes_gen[3].serdes_inst/oserdes_m:D1 (PAD)
+  Source Clock:      clk_sys_inst/pll_base_inst/CLKOUT1 rising
+
+  Data Path: hdmi_inst/hdmi_phy_inst/tmds_data_3_4 to hdmi_inst/hdmi_phy_inst/serdes_gen[3].serdes_inst/oserdes_m:D1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.525   0.725  hdmi_inst/hdmi_phy_inst/tmds_data_3_4 (hdmi_inst/hdmi_phy_inst/tmds_data_3_4)
+    OSERDES2:D1                0.000          hdmi_inst/hdmi_phy_inst/serdes_gen[3].serdes_inst/oserdes_m
+    ----------------------------------------
+    Total                      1.250ns (0.525ns logic, 0.725ns route)
+                                       (42.0% logic, 58.0% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 41 / 41
+-------------------------------------------------------------------------
+Delay:               3.593ns (Levels of Logic = 1)
+  Source:            hdmi_inst/hdmi_phy_inst/serdes_gen[2].serdes_inst/oserdes_m:OQ (PAD)
+  Destination:       hdmi1_d_p<2> (PAD)
+
+  Data Path: hdmi_inst/hdmi_phy_inst/serdes_gen[2].serdes_inst/oserdes_m:OQ to hdmi1_d_p<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    OSERDES2:OQ            1   0.000   0.681  hdmi_inst/hdmi_phy_inst/serdes_gen[2].serdes_inst/oserdes_m (hdmi_inst/hdmi_phy_inst/tmdsint<2>)
+     OBUFDS:I->O               2.912          hdmi_inst/hdmi_phy_inst/TMDS2 (hdmi1_d_p<2>)
+    ----------------------------------------
+    Total                      3.593ns (2.912ns logic, 0.681ns route)
+                                       (81.0% logic, 19.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk_sys_inst/pll_base_inst/CLKOUT1
+----------------------------------+---------+---------+---------+---------+
+                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------+---------+---------+---------+---------+
+clk_sys_inst/pll_base_inst/CLKOUT1|    3.981|         |         |         |
+clk_sys_inst/pll_base_inst/CLKOUT2|    1.937|         |         |         |
+----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_sys_inst/pll_base_inst/CLKOUT2
+----------------------------------+---------+---------+---------+---------+
+                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------+---------+---------+---------+---------+
+clk_sys_inst/pll_base_inst/CLKOUT1|    2.077|         |         |         |
+clk_sys_inst/pll_base_inst/CLKOUT2|   15.716|         |         |         |
+----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_sys_inst/pll_base_inst/CLKOUT3
+----------------------------------+---------+---------+---------+---------+
+                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------+---------+---------+---------+---------+
+clk_sys_inst/pll_base_inst/CLKOUT2|    3.936|         |         |         |
+clk_sys_inst/pll_base_inst/CLKOUT3|    7.710|         |         |         |
+sdram_ctrl_inst/ach_G             |         |    5.700|         |         |
+----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock sdram_ctrl_inst/ach_G
+----------------------------------+---------+---------+---------+---------+
+                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------+---------+---------+---------+---------+
+clk_sys_inst/pll_base_inst/CLKOUT3|         |         |    1.436|         |
+----------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 22.00 secs
+Total CPU time to Xst completion: 21.24 secs
+ 
+--> 
+
+
+Total memory usage is 415084 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  110 (   0 filtered)
+Number of infos    :   26 (   0 filtered)
+

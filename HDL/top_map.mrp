@@ -1,0 +1,421 @@
+Release 14.7 Map P.20131013 (lin64)
+Xilinx Mapping Report File for Design 'top'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off
+-pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+Target Device  : xc6slx9
+Target Package : tqg144
+Target Speed   : -2
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Sat May  1 18:09:41 2021
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    2
+Slice Logic Utilization:
+  Number of Slice Registers:                   702 out of  11,440    6%
+    Number used as Flip Flops:                 701
+    Number used as Latches:                      1
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                        909 out of   5,720   15%
+    Number used as logic:                      838 out of   5,720   14%
+      Number using O6 output only:             566
+      Number using O5 output only:              66
+      Number using O5 and O6:                  206
+      Number used as ROM:                        0
+    Number used as Memory:                      40 out of   1,440    2%
+      Number used as Dual Port RAM:             32
+        Number using O6 output only:             4
+        Number using O5 output only:             0
+        Number using O5 and O6:                 28
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:             8
+        Number using O6 output only:             8
+        Number using O5 output only:             0
+        Number using O5 and O6:                  0
+    Number used exclusively as route-thrus:     31
+      Number with same-slice register load:     23
+      Number with same-slice carry load:         8
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   376 out of   1,430   26%
+  Number of MUXCYs used:                       208 out of   2,860    7%
+  Number of LUT Flip Flop pairs used:        1,073
+    Number with an unused Flip Flop:           479 out of   1,073   44%
+    Number with an unused LUT:                 164 out of   1,073   15%
+    Number of fully used LUT-FF pairs:         430 out of   1,073   40%
+    Number of unique control sets:              55
+    Number of slice register sites lost
+      to control set restrictions:             198 out of  11,440    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        70 out of     102   68%
+    Number of LOCed IOBs:                       70 out of      70  100%
+    IOB Flip Flops:                             32
+    IOB Master Pads:                             4
+    IOB Slave Pads:                              4
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         9 out of      32   28%
+  Number of RAMB8BWERs:                          0 out of      64    0%
+  Number of BUFIO2/BUFIO2_2CLKs:                 1 out of      32    3%
+    Number used as BUFIO2s:                      1
+    Number used as BUFIO2_2CLKs:                 0
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             1 out of      32    3%
+    Number used as BUFIO2FBs:                    1
+    Number used as BUFIO2FB_2CLKs:               0
+  Number of BUFG/BUFGMUXs:                       4 out of      16   25%
+    Number used as BUFGs:                        4
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
+  Number of ILOGIC2/ISERDES2s:                   8 out of     200    4%
+    Number used as ILOGIC2s:                     8
+    Number used as ISERDES2s:                    0
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         1 out of     200    1%
+    Number used as IODELAY2s:                    1
+    Number used as IODRP2s:                      0
+    Number used as IODRP2_MCBs:                  0
+  Number of OLOGIC2/OSERDES2s:                  32 out of     200   16%
+    Number used as OLOGIC2s:                    24
+    Number used as OSERDES2s:                    8
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             1 out of       8   12%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            0 out of      16    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            1 out of       2   50%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                3.68
+
+Peak Memory Usage:  688 MB
+Total REAL time to MAP completion:  33 secs 
+Total CPU time to MAP completion:   33 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:Pack:1653 - At least one timing constraint is impossible to meet because component delays alone exceed the constraint. A timing
+   constraint summary below shows the failing constraints (preceded with an Asterisk (*)). Please use the Timing Analyzer (GUI) or TRCE
+   (command line) with the Mapped NCD and PCF files to identify which constraints and paths are failing because of the component delays
+   alone. If the failing path(s) is mapped to Xilinx components as expected, consider relaxing the constraint. If it is not mapped to
+   components as expected, re-evaluate your HDL and how synthesis is optimizing the path. To allow the tools to bypass this error, set the
+   environment variable XIL_TIMING_ALLOW_IMPOSSIBLE to 1.
+
+
+   For more information about the Timing Analyzer, consult the Xilinx Timing Analyzer Reference manual; for more information on TRCE,
+   consult the Xilinx Command Line Tools User Guide "TRACE" chapter.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net sdram_ctrl_inst/ach_G is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network
+   hdmi_inst/hdmi_phy_inst/pixel2x/bram_gen[29].bram_inst/SPO has no load.
+INFO:LIT:395 - The above info message is repeated 38 more times for the
+   following (max. 5 shown):
+   hdmi_inst/hdmi_phy_inst/pixel2x/bram_gen[28].bram_inst/SPO,
+   hdmi_inst/hdmi_phy_inst/pixel2x/bram_gen[27].bram_inst/SPO,
+   hdmi_inst/hdmi_phy_inst/pixel2x/bram_gen[26].bram_inst/SPO,
+   hdmi_inst/hdmi_phy_inst/pixel2x/bram_gen[25].bram_inst/SPO,
+   hdmi_inst/hdmi_phy_inst/pixel2x/bram_gen[24].bram_inst/SPO
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
+   1.260 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   3 block(s) removed
+   8 block(s) optimized away
+  12 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+Loadless block "clk_sys_inst/dclk_buf" (CKBUF) removed.
+ The signal "clk_sys_inst/pll_dclk" is loadless and has been removed.
+The signal "gba_to_ram_fifo/s_axis_tready" is sourceless and has been removed.
+The signal
+"gba_to_ram_fifo/U0/xst_fifo_generator/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sy
+nc_fifo.gl0.wr/gwas.wsts/ram_full_i" is sourceless and has been removed.
+ Sourceless block
+"gba_to_ram_fifo/U0/xst_fifo_generator/gaxis_fifo.axis_s_axis_tready1_INV_0"
+(BUF) removed.
+The signal "gba_to_ram_fifo/U0/xst_fifo_generator/inverted_reset" is sourceless
+and has been removed.
+The signal "line_buf/doutb<31>" is sourceless and has been removed.
+The signal "line_buf/doutb<30>" is sourceless and has been removed.
+The signal "line_buf/doutb<29>" is sourceless and has been removed.
+The signal "line_buf/doutb<28>" is sourceless and has been removed.
+The signal "line_buf/doutb<27>" is sourceless and has been removed.
+The signal "line_buf/doutb<26>" is sourceless and has been removed.
+The signal "line_buf/doutb<25>" is sourceless and has been removed.
+The signal "line_buf/doutb<24>" is sourceless and has been removed.
+Unused block
+"gba_to_ram_fifo/U0/xst_fifo_generator/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sy
+nc_fifo.gl0.wr/gwas.wsts/ram_full_i" (FF) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+GND
+		gba_to_ram_fifo/U0/xst_fifo_generator/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_s
+ync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/X
+ST_GND
+INV 		gba_to_ram_fifo/U0/xst_fifo_generator/inverted_reset1_INV_0
+GND 		gba_to_ram_fifo/XST_GND
+VCC 		gba_to_ram_fifo/XST_VCC
+GND 		line_buf/XST_GND
+VCC 		line_buf/XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 11 - Timing Report
+--------------------------
+INFO:Timing:3284 - This timing report was generated using estimated delay 
+   information.  For accurate numbers, please refer to the post Place and Route 
+   timing report.
+Number of Timing Constraints that were not applied: 2
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+* TS_clk_sys_inst_pll_clk2x = PERIOD TIMEGR | SETUP       |     5.247ns|     1.487ns|       0|           0
+  P "clk_sys_inst_pll_clk2x" TS_pclk_in * 2 | HOLD        |    -0.869ns|            |      20|       16659
+   HIGH 50%                                 | MINPERIOD   |     4.068ns|     2.666ns|       0|           0
+----------------------------------------------------------------------------------------------------------
+* TS_clk_sys_inst_pll_sclk = PERIOD TIMEGRP | SETUP       |    -0.108ns|    10.183ns|       1|         108
+   "clk_sys_inst_pll_sclk" TS_pclk_in * 1.4 | HOLD        |     0.087ns|            |       0|           0
+  2857143 HIGH 50%                          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+* TS_clk_sys_inst_pll_clk1x = PERIOD TIMEGR | SETUP       |     8.410ns|     5.058ns|       0|           0
+  P "clk_sys_inst_pll_clk1x" TS_pclk_in HIG | HOLD        |    -0.097ns|            |      56|        5432
+  H 50%                                     |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_pclk_in = PERIOD TIMEGRP "pclk_in" 74. | MINLOWPULSE |     8.468ns|     5.000ns|       0|           0
+  25 MHz HIGH 50%                           |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_clk_sys_inst_pll_clk10x = PERIOD TIMEG | N/A         |         N/A|         N/A|     N/A|         N/A
+  RP "clk_sys_inst_pll_clk10x" TS_pclk_in * |             |            |            |        |            
+   10 HIGH 50%                              |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Review Timing Report for more details on the following derived constraints.
+To create a Timing Report, run "trce -v 12 -fastpaths -o design_timing_report design.ncd design.pcf"
+or "Run Timing Analysis" from Timing Analyzer (timingan).
+Derived Constraints for TS_pclk_in
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_pclk_in                     |     13.468ns|      5.000ns|     14.547ns|            0|           77|            0|      3303075|
+| TS_clk_sys_inst_pll_sclk      |      9.428ns|     10.183ns|          N/A|            1|            0|         5792|            0|
+| TS_clk_sys_inst_pll_clk2x     |      6.734ns|      2.666ns|          N/A|           20|            0|          316|            0|
+| TS_clk_sys_inst_pll_clk10x    |      1.347ns|          N/A|          N/A|            0|            0|            0|            0|
+| TS_clk_sys_inst_pll_clk1x     |     13.468ns|      5.058ns|          N/A|           56|            0|      3296967|            0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+3 constraints not met.
+INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
+   constraint is not analyzed due to the following: No paths covered by this 
+   constraint; Other constraints intersect with this constraint; or This 
+   constraint was disabled by a Path Tracing Control. Please run the Timespec 
+   Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.
+
+
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| A_BUTTON                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| B_BUTTON                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| CLK_NES                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| DATA_NES                           | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| DOWN_BUTTON                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| LATCH_NES                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| LEFT_BUTTON                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| L_BUTTON                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| RIGHT_BUTTON                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| R_BUTTON                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| SELECT_BUTTON                      | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| START_BUTTON                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| UP_BUTTON                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| gba_b<0>                           | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| gba_b<1>                           | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| gba_b<2>                           | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| gba_b<3>                           | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| gba_b<4>                           | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| gba_clk                            | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| gba_g<0>                           | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| gba_g<1>                           | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| gba_g<2>                           | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| gba_g<3>                           | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| gba_g<4>                           | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| gba_hs                             | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| gba_r<0>                           | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| gba_r<1>                           | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| gba_r<2>                           | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| gba_r<3>                           | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| gba_r<4>                           | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| gba_vs                             | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| hdmi1_c_n                          | IOBS             | OUTPUT    | TMDS_33              |       |          |      |              |          |          |
+| hdmi1_c_p                          | IOBM             | OUTPUT    | TMDS_33              |       |          |      | OSERDES      |          |          |
+| hdmi1_d_n<0>                       | IOBS             | OUTPUT    | TMDS_33              |       |          |      |              |          |          |
+| hdmi1_d_n<1>                       | IOBS             | OUTPUT    | TMDS_33              |       |          |      |              |          |          |
+| hdmi1_d_n<2>                       | IOBS             | OUTPUT    | TMDS_33              |       |          |      |              |          |          |
+| hdmi1_d_p<0>                       | IOBM             | OUTPUT    | TMDS_33              |       |          |      | OSERDES      |          |          |
+| hdmi1_d_p<1>                       | IOBM             | OUTPUT    | TMDS_33              |       |          |      | OSERDES      |          |          |
+| hdmi1_d_p<2>                       | IOBM             | OUTPUT    | TMDS_33              |       |          |      | OSERDES      |          |          |
+| pclk_in                            | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| sdram_a<0>                         | IOB              | OUTPUT    | LVTTL                |       | 12       | FAST | OFF          |          |          |
+| sdram_a<1>                         | IOB              | OUTPUT    | LVTTL                |       | 12       | FAST | OFF          |          |          |
+| sdram_a<2>                         | IOB              | OUTPUT    | LVTTL                |       | 12       | FAST | OFF          |          |          |
+| sdram_a<3>                         | IOB              | OUTPUT    | LVTTL                |       | 12       | FAST | OFF          |          |          |
+| sdram_a<4>                         | IOB              | OUTPUT    | LVTTL                |       | 12       | FAST | OFF          |          |          |
+| sdram_a<5>                         | IOB              | OUTPUT    | LVTTL                |       | 12       | FAST | OFF          |          |          |
+| sdram_a<6>                         | IOB              | OUTPUT    | LVTTL                |       | 12       | FAST | OFF          |          |          |
+| sdram_a<7>                         | IOB              | OUTPUT    | LVTTL                |       | 12       | FAST | OFF          |          |          |
+| sdram_a<8>                         | IOB              | OUTPUT    | LVTTL                |       | 12       | FAST | OFF          |          |          |
+| sdram_a<9>                         | IOB              | OUTPUT    | LVTTL                |       | 12       | FAST |              |          |          |
+| sdram_a<10>                        | IOB              | OUTPUT    | LVTTL                |       | 12       | FAST | OFF          |          |          |
+| sdram_a<11>                        | IOB              | OUTPUT    | LVTTL                |       | 12       | FAST |              |          |          |
+| sdram_a<12>                        | IOB              | OUTPUT    | LVTTL                |       | 12       | FAST |              |          |          |
+| sdram_ba<0>                        | IOB              | OUTPUT    | LVTTL                |       | 12       | FAST | OFF          |          |          |
+| sdram_ba<1>                        | IOB              | OUTPUT    | LVTTL                |       | 12       | FAST | OFF          |          |          |
+| sdram_cas                          | IOB              | OUTPUT    | LVTTL                |       | 12       | FAST | OFF          |          |          |
+| sdram_cle                          | IOB              | OUTPUT    | LVTTL                |       | 12       | FAST |              |          |          |
+| sdram_clk                          | IOB              | OUTPUT    | LVTTL                |       | 12       | FAST |              |          |          |
+| sdram_cs                           | IOB              | OUTPUT    | LVTTL                |       | 12       | FAST |              |          |          |
+| sdram_dq<0>                        | IOB              | BIDIR     | LVTTL                |       | 12       | FAST | IFF          |          |          |
+|                                    |                  |           |                      |       |          |      | OFF          |          |          |
+| sdram_dq<1>                        | IOB              | BIDIR     | LVTTL                |       | 12       | FAST | IFF          |          |          |
+|                                    |                  |           |                      |       |          |      | OFF          |          |          |
+| sdram_dq<2>                        | IOB              | BIDIR     | LVTTL                |       | 12       | FAST | IFF          |          |          |
+|                                    |                  |           |                      |       |          |      | OFF          |          |          |
+| sdram_dq<3>                        | IOB              | BIDIR     | LVTTL                |       | 12       | FAST | IFF          |          |          |
+|                                    |                  |           |                      |       |          |      | OFF          |          |          |
+| sdram_dq<4>                        | IOB              | BIDIR     | LVTTL                |       | 12       | FAST | IFF          |          |          |
+|                                    |                  |           |                      |       |          |      | OFF          |          |          |
+| sdram_dq<5>                        | IOB              | BIDIR     | LVTTL                |       | 12       | FAST | IFF          |          |          |
+|                                    |                  |           |                      |       |          |      | OFF          |          |          |
+| sdram_dq<6>                        | IOB              | BIDIR     | LVTTL                |       | 12       | FAST | IFF          |          |          |
+|                                    |                  |           |                      |       |          |      | OFF          |          |          |
+| sdram_dq<7>                        | IOB              | BIDIR     | LVTTL                |       | 12       | FAST | IFF          |          |          |
+|                                    |                  |           |                      |       |          |      | OFF          |          |          |
+| sdram_dqm                          | IOB              | OUTPUT    | LVTTL                |       | 12       | FAST |              |          |          |
+| sdram_ras                          | IOB              | OUTPUT    | LVTTL                |       | 12       | FAST | OFF          |          |          |
+| sdram_we                           | IOB              | OUTPUT    | LVTTL                |       | 12       | FAST | OFF          |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.
