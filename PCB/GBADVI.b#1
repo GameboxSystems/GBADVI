@@ -6386,6 +6386,7 @@ design rules under a new name.
 <attribute name="NAME" x="5.462" y="11.289" size="0.8128" layer="25" rot="R270"/>
 <attribute name="VALUE" x="16.282" y="9.361" size="1.27" layer="27" rot="R90"/>
 </element>
+<element name="U$10" library="SNES_CONT" package="SNES_CONT" value="SNES_CONT" x="-5.65" y="-28.6" smashed="yes"/>
 <element name="R16" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="0R" x="14.3" y="60.65" smashed="yes" rot="R90">
 <attribute name="NAME" x="19.565" y="59.015" size="1.27" layer="25" rot="R90"/>
 <attribute name="POPULARITY" value="77" x="14.3" y="60.65" size="1.778" layer="27" rot="R90" display="off"/>
