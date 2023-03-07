@@ -4,7 +4,7 @@
         "name": "Autodesk EAGLE"
     },
     "description": {
-        "EN": "EAGLE default 2 layer CAM job."
+        "EN": "EAGLE default 4 layer CAM job."
     },
     "output_type": "zip",
     "outputs": [
@@ -32,7 +32,7 @@
                         "layer_details": "mixed",
                         "layer_type": "top"
                     },
-                    "filename_format": "%PREFIX/copper_top.gbr",
+                    "filename_format": "%PREFIX/copper_top_l1.gbr",
                     "layers": [
                         1,
                         17,
@@ -55,9 +55,59 @@
                         "file_function": "Copper",
                         "layer": 2,
                         "layer_details": "mixed",
+                        "layer_type": "Inner"
+                    },
+                    "filename_format": "%PREFIX/copper_inner_l2.gbr",
+                    "layers": [
+                        2,
+                        17,
+                        18
+                    ],
+                    "name": "Copper Layer 2",
+                    "polarity": "positive",
+                    "type": "gerber_layer"
+                },
+                {
+                    "advanced_options": {
+                        "mirror": false,
+                        "offset_x": 0,
+                        "offset_y": 0,
+                        "rotate": false,
+                        "upside_down": false
+                    },
+                    "board_outline": false,
+                    "config": {
+                        "file_function": "Copper",
+                        "layer": 3,
+                        "layer_details": "mixed",
+                        "layer_type": "Inner"
+                    },
+                    "filename_format": "%PREFIX/copper_inner_l3.gbr",
+                    "layers": [
+                        15,
+                        17,
+                        18
+                    ],
+                    "name": "Copper Layer 15",
+                    "polarity": "positive",
+                    "type": "gerber_layer"
+                },
+                {
+                    "advanced_options": {
+                        "mirror": false,
+                        "offset_x": 0,
+                        "offset_y": 0,
+                        "rotate": false,
+                        "upside_down": false
+                    },
+                    "board_outline": false,
+                    "config": {
+                        "file_function": "Copper",
+                        "layer": 4,
+                        "layer_details": "mixed",
                         "layer_type": "bottom"
                     },
-                    "filename_format": "%PREFIX/copper_bottom.gbr",
+                    "filename_format": "%PREFIX/copper_bottom_l4.gbr",
                     "layers": [
                         16,
                         17,
@@ -224,72 +274,17 @@
                     "type": "gerber_layer"
                 },
                 {
-                    "advanced_options": {
-                        "mirror": false,
-                        "offset_x": 0,
-                        "offset_y": 0,
-                        "rotate": false,
-                        "upside_down": false
-                    },
                     "board_outline": false,
                     "config": {
-                        "file_function": "Copper",
-                        "layer": 1,
-                        "layer_details": "mixed",
-                        "layer_type": "top"
+                        "description": "Milling Layer",
+                        "file_function": "Other"
                     },
-                    "filename_format": "%PREFIX/%FF.gbr",
+                    "filename_format": "%PREFIX/Milling.gbr",
                     "layers": [
-                        100
+                        46
                     ],
                     "milling": false,
-                    "name": "Stiffner Top",
-                    "polarity": "positive",
-                    "type": "gerber_layer"
-                },
-                {
-                    "advanced_options": {
-                        "mirror": false,
-                        "offset_x": 0,
-                        "offset_y": 0,
-                        "rotate": false,
-                        "upside_down": false
-                    },
-                    "board_outline": false,
-                    "config": {
-                        "file_function": "Copper",
-                        "layer": 2,
-                        "layer_details": "mixed",
-                        "layer_type": "Bottom"
-                    },
-                    "filename_format": "%PREFIX/%FF.gbr",
-                    "layers": [
-                        101
-                    ],
-                    "milling": false,
-                    "name": "Stiffner Bottom",
-                    "polarity": "positive",
-                    "type": "gerber_layer"
-                },
-                {
-                    "advanced_options": {
-                        "mirror": false,
-                        "offset_x": 0,
-                        "offset_y": 0,
-                        "rotate": false,
-                        "upside_down": false
-                    },
-                    "board_outline": false,
-                    "config": {
-                        "description": "Stiffener Doc",
-                        "file_function": "OtherDrawing"
-                    },
-                    "filename_format": "%PREFIX/%FF.gbr",
-                    "layers": [
-                        51
-                    ],
-                    "milling": false,
-                    "name": "Documentation",
+                    "name": "Milling",
                     "polarity": "positive",
                     "type": "gerber_layer"
                 }
@@ -345,7 +340,7 @@
             ]
         }
     ],
-    "timestamp": "2019-07-17T17:48:33",
+    "timestamp": "2019-07-17T17:49:43",
     "type": "EAGLE CAM job",
     "units": "metric",
     "version": "9.2.0"
